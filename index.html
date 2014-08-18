@@ -1,220 +1,54 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Auction Homepage</title>
+<!doctype html>
+<html class="no-js" ng-app="auction">
+  <head>
+    <meta charset="utf-8">
+    <title ng-bind="pageTitle">Auction</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+      <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>-->
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-</head>
-<body>
+    <!-- Navbar -->
+    <auction-navbar></auction-navbar>
+    <!-- / Navbar -->
 
-<!-- Navbar -->
-<div class="navbar navbar-inverse">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="javascript:void(0);">ABC Auction</a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <form class="navbar-form navbar-left navbar-input-group" role="search">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Enter product name">
-                </div>
-                <!--
-                <button type="submit" class="btn btn-default" onClick = "searchButtonPressed()">Search</button>
-                -->
-                <button type="submit" class="btn btn-default" formaction="search-results.html">Search</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-question-sign"></span> Help</a>
-                </li>
-                <li><a href="javascript:void(0);"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-                <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping
-                    cart</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!-- / Navbar -->
-
-<div class="container">
-
-    <div class="row">
-        <!-- Featured Products -->
-
-        <div id="featured-product-carousel" class="carousel slide" data-pause="hover" data-wrap="true"
-             data-interval="3000">
-            <ol class="carousel-indicators">
-                <li data-target="#featured-product-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#featured-product-carousel" data-slide-to="1" class=""></li>
-                <li data-target="#featured-product-carousel" data-slide-to="2" class=""></li>
-            </ol>
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="assets/img/promo-product-1.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
-                </div>
-                <div class="item">
-                    <img src="assets/img/promo-product-2.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
-                </div>
-                <div class="item">
-                    <img src="assets/img/promo-product-3.jpg" alt="ABC Auction Deals" class="img-responsive center-block">
-                </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#featured-product-carousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-            </a>
-            <a class="right carousel-control" href="#featured-product-carousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-            </a>
-        </div>
-
-        <!-- / Featured Products -->
-    </div>
-    <br/><br/>
-    <div class="row">
-        <!-- Featured Products list with thumbnails and description  -->
-        <ul class="list-unstyled">
-            <li class="col-lg-6">
-                <div class="row">
-                <div class="col-xs-4">
-                    <a href="javascript:void(0)"><img src="assets/img/01.jpg" alt="" class="img-responsive"></a>
-                </div>
-
-                <div class="col-xs-8">
-                    <h2><a href="javascript:void(0)">Item's title</a></h2>
-
-                    <p>
-                        <b>Item's description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod
-                        tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-                </div>
-            </li>
-            <li class="col-lg-6">
-                <div class="col-md-6">
-                    <a href="javascript:void(0)"><img src="assets/img/02.jpg" alt="" class="img-responsive"></a>
-                </div>
-
-                <div class="col-md-6">
-                    <h2><a href="javascript:void(0)">Item's title</a></h2>
-
-                    <p>
-                        <b>Item's description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod
-                        tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </li>
-            <li class="col-lg-6">
-                <div class="col-md-6">
-                    <a href="javascript:void(0)"><img src="assets/img/03.jpg" alt="" class="img-responsive"></a>
-                </div>
-
-                <div class="col-md-6">
-                    <h2><a href="javascript:void(0)">Item's title</a></h2>
-
-                    <p>
-                        <b>Item's description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod
-                        tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </li>
-            <li class="col-lg-6">
-                <div class="col-md-6">
-                    <a href="javascript:void(0)"><img src="assets/img/04.jpg" alt="" class="img-responsive"></a>
-                </div>
-
-                <div class="col-md-6">
-                    <h2><a href="javascript:void(0)">Item's title</a></h2>
-
-                    <p>
-                        <b>Item's description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod
-                        tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </li>
-            <li class="col-lg-6">
-                <div class="col-md-6">
-                    <a href="javascript:void(0)"><img src="assets/img/05.jpg" alt="" class="img-responsive"></a>
-                </div>
-
-                <div class="col-md-6">
-                    <h2><a href="javascript:void(0)">Item's title</a></h2>
-
-                    <p>
-                        <b>Item's description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod
-                        tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </li>
-            <li class="col-lg-6">
-                <div class="col-md-6">
-                    <a href="javascript:void(0)"><img src="assets/img/06.jpg" alt="" class="img-responsive"></a>
-                </div>
-
-                <div class="col-md-6">
-                    <h2><a href="javascript:void(0)">Item's title</a></h2>
-
-                    <p>
-                        <b>Item's description:</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                        eiusmod
-                        tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </li>
-        </ul>
-        <!-- / Featured Products list with thumbnails and description  -->
+        <div class="row" ng-view></div>
     </div>
 
     <!-- Footer -->
-    <footer class="text-center">
-        <br/>
-        <a href="javascript:void(0)">Home</a> |
-        <a href="javascript:void(0)">Search</a> |
-        <a href="javascript:void(0)">About Us</a> |
-        <a href="javascript:void(0)">Terms of Service</a>
-        <br/><br/>
-    </footer>
+    <auction-footer></auction-footer>
     <!-- / Footer -->
 
-</div>
+    <!-- Lib scripts -->
+    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
+    <script src="lib/jquery/lodash.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
 
-<script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-
-<script>
-    function searchButtonPressed(){
-        window.open("search-results.html");
-    }
-</script>
+    <!-- Custom scripts -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controller/HomeController.js"></script>
+    <script src="scripts/controller/ProductDetailsController.js"></script>
+    <script src="scripts/controller/SearchController.js"></script>
+    <script src="scripts/directive/FooterDirective.js"></script>
+    <script src="scripts/directive/NavbarDirective.js"></script>
+    <script src="scripts/service/ProductService.js"></script>
 
 </body>
 </html>
