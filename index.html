@@ -1,56 +1,77 @@
-<!doctype html>
-<html class="no-js" ng-app="auction">
-  <head>
-    <meta charset="utf-8">
-    <title ng-bind="pageTitle">Auction</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-      <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/my-styles.css">
-    <!--<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>-->
+<!DOCTYPE html>
 
-    <!-- endbuild -->
-  </head>
-  <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<html ng-app>
 
-    <!-- Navbar -->
-    <auction-navbar></auction-navbar>
-    <!-- / Navbar -->
+<head>
+	<title>Cristina's Java Quizzes</title>
+	<script type = "text/javascript" src="angular.min.js"> </script>
+	<script type = "text/javascript" src="controllers/QuestionController.js"> </script>
+	<link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="style.css" rel="stylesheet" />
+</head>
 
-    <div class="container">
-        <div class="row" ng-view></div>
+<body>
+
+<div class="navbar navbar-custom">
+        <a class="navbar-brand" href="#">Cristina's Java Quizzes</a>
     </div>
 
-    <!-- Footer -->
-    <auction-footer></auction-footer>
-    <!-- / Footer -->
+<div class="panel">
 
-    <!-- Lib scripts -->
-    <script src="lib/jquery/jquery-2.1.1.min.js"></script>
-    <script src="lib/jquery/lodash.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.js"></script>
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular/angular-route.js"></script>
-
-    <!-- Custom scripts -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/controller/HomeController.js"></script>
-    <script src="scripts/controller/ProductDetailsController.js"></script>
-    <script src="scripts/controller/SearchController.js"></script>
-    <script src="scripts/directive/FooterDirective.js"></script>
-    <script src="scripts/directive/NavbarDirective.js"></script>
-    <script src="scripts/directive/SearchFormDirective.js"></script>
-    <script src="scripts/service/ProductService.js"></script>
+	<div class="panel-header">
+        	<div class="row">
+				<div class="col-sm-6">
+				<h2>Your score: <span class="label label-info">Label</span></h2>
+				<br/><br/>
+				</div>
+				<div class="col-sm-6">
+					<h2>Your time: <span class="label label-info">Label</span></h2>
+					<br/><br/>
+				</div>
+			</div>
+    </div>
+ 
+	<div ng-controller="QuestionController" class="row grid-row">
+	
+	<div class="col-sm-8" style="height:500px;overflow-y:scroll;">			
+		<ul>
+			<li ng-repeat="question in questions" class="list-unstyled"><blockquote>{{question.text}}
+				<form role="form">
+					<div class="radio">
+						<label><input type="radio" name="optradio">{{question.a1}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="optradio">{{question.a2}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="optradio">{{question.a3}}</label>
+					</div>
+					<div class="radio">
+						<label><input type="radio" name="optradio">{{question.a4}}</label>
+					</div>	</blockquote>	
+				</form>
+				<br />
+			</li>
+		</ul>		
+	</div>
+	
+	<div class="col-sm-4">
+		<div class="row">
+			<div class="col-sm-12">	
+			   
+				<input type="text" class="form-control" ng-model="subject" placeholder="Filter">{{subject}}
+				
+				<ul>
+					<li ng-repeat="question in questions | filter:subject | orderBy:'text' | limitTo:10 ">{{question.text | limitTo:150 }}</li>
+				</ul>
+			</div>		
+		</div>
+	</div>
+	
+</div>
+	
 
 </body>
+
 </html>
