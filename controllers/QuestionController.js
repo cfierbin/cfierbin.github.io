@@ -1,31 +1,22 @@
-function QuestionController($scope){
+var myApp = angular.module('jQuiz',[]);
 
-/*
-$scope.questions = {
+myApp.controller('QuestionController',
 
-"Q1":{"text":"Which of the following does not extend java.util.Collection?",
-	   "a1":"Vector",
-	   "a2":"Hashtable",
-	   "a3":"ArrayList",
-	   "a4":"TreeSet"
-	  },
-"Q2":{"text":"Which of the following collection class is synchronized?",
-	   "a1":"Vector",
-	   "a2":"Hashtable",
-	   "a3":"HashMap",
-	   "a4":"LinkedHashMap",
-	   "a5":"none of the above"
-	  },
-"Q3":{"text":"Integer extends Number.",
-	   "a1":"True",
-	   "a2":"False",
-	  }
+function($scope){
 
+$scope.score=0;
+$scope.answer=5;
+$scope.subject="";
+
+$scope.incrementScore = function(){
+ $scope.score++;
 };
-*/
 
-//array of objects!
-//filters expect an array, not an object of objects!
+$scope.calculateScore = function(answer, rightAnswer){
+ if (answer == rightAnswer) 
+	$scope.incrementScore(); //$scope.score++;
+ else $scope.score--;
+};
 
 $scope.questions = [
 
@@ -53,3 +44,4 @@ $scope.questions = [
 ];
 
 }
+);
