@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html ng-app>
+
+<head>
+	<title>Cristina's Java Quizzes</title>
+	<script type = "text/javascript" src="angular.min.js"> </script>
+	<script type = "text/javascript" src="controllers/QuestionController.js"> </script>
+	<link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+
+<body>
+
+	<div class="page-header">
+        <h1>Cristina's Java Quizzes</h1>
+    </div>
+
+<div class="btn btn-success">Bootstrap</div>
+
+	<div ng-controller="QuestionController">
+	
+		<ul>
+			<li ng-repeat="question in questions">{{question.text}}
+				<ul>
+				<li> {{question.a1}} </li>
+				<li> {{question.a2}} </li>
+				<li> {{question.a3}} </li>
+				<li> {{question.a4}} </li>
+				</ul>		
+			</li>
+		</ul>
+		
+		Filter:
+		<br />
+			<input type = "text" ng-model="subject" />{{subject}}
+		<br />
+		
+		<ul>
+			<li ng-repeat="question in questions | filter:subject | orderBy:'text' | limitTo:10 ">{{question.text | limitTo:150 }}</li>
+		</ul>
+				
+	</div>
+
+</body>
+
+</html>
