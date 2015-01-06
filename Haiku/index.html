@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<head>
+
+  <!-- <link href="/normalize.css" rel="stylesheet"> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  
+  <style>
+    header {
+      text-align: right;
+      background: url('https://raw.githubusercontent.com/cfierbin/cfierbin.github.io/master/images/DSCN1354.JPG');
+      background-size: cover;
+	  font-size: 20px;
+      color: white;
+    }
+    
+    a {
+      color: white;
+    }
+	
+    h1 {
+      font-size: 70px;
+    }
+	
+	p {
+		font-size: 20px;
+		margin: 0px;
+	}
+	
+    img {
+      width: 250px;
+      margin: 40px 0px 0px 0px;
+      border: 7px solid rgba(255,0,255,0.5);
+      border-radius: 20px;
+    }
+	
+    ul {
+      padding: 10px;
+      background: rgba(255,100,200,0.8);
+    }
+	
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+	  font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+	
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+	
+    div {
+      width: 250px;
+      height: 250px;
+      background: #F0F;
+      margin: 20px 30px 10px 10px;
+	  padding: 0px 10px 0px 0px;
+      text-align: right;
+	  font-size: 14px;
+	  font-family: "Comic Sans MS", cursive, sans-serif;
+	  float: left;
+    }
+    
+    .my_button{
+      margin: 30px 10px 10px 10px;
+	  background-color: yellow;
+	  font-size: 18px;
+	  font-family: "Comic Sans MS", cursive, sans-serif;
+	  color: green;
+    }
+    
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+      img {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Cristina's Haiku</h1>
+    <img src="https://avatars1.githubusercontent.com/u/6158686?v=3&s=460">
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Best Poems</a></li>
+      <li><a href="#">Favourite Quotes</a></li>
+      <li><a href="#">Blogs I Read</a></li>
+    </ul>
+  </header>
+  
+
+  <div>
+    <h2>Sand castles</h2>
+    <p>Sand castles </p>
+    <p>On the deserted beach</p>
+    <p>My far-away country </p>
+    <button class="my_button">Like</button>
+  </div>
+  
+  
+  <div>
+    <h2>Windy afternoon</h2>
+    <p>Windy afternoon</p>
+    <p>Your smile</p>
+    <p>On a stranger's face</p>
+    <button class="my_button">Like</button>
+  </div>
+  
+  
+  <div>
+    <h2>Summer</h2>
+    <p>in grandmother's garden<br>
+    the evening star<br>
+    and a pumpkin lantern</p>
+    <button class="my_button">Like</button>
+  </div>
+  
+  <div>
+    <h2>Traffic Light</h2>
+    <p>Waiting at a traffic light<br>
+    Red carnations<br>
+    Coming out from a rucksack</p>
+    <button class="my_button">Like</button>
+  </div>
+
+ 
+<!-- 
+  <div style="float: left;" >
+  <p>block level content or <span>inline content</span>.</p>
+  <p>block level content or <span>inline content</span>.</p>
+</div>
+<div style="float: left;" >
+  <p>block level content or <span>inline content</span>.</p>
+  <p>block level content or <span>inline content</span>.</p>
+</div>
+<div style="float: left;" >
+  <p>block level content or <span>inline content</span>.</p>
+  <p>block level content or <span>inline content</span>.</p>
+</div>
+-->
+  
+  <script>
+    $(".my_button").on("click", function() {
+      alert("Thank you!");
+    });
+  </script>
+  
+</body>
