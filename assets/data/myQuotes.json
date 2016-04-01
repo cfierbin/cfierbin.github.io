@@ -7,6 +7,70 @@
   "category": "StExupery", 
   "title": "My Favourite Quote", 
   "id": "" 
+  },
+  { 
+  "quote": "Treat people as if they were what they ought to be and you will help them become what they are capable of becoming.", 
+  "author": "Goethe", 
+  "tags": [ ], 
+  "category": "", 
+  "title": "", 
+  "id": "" 
+  },
+    { 
+  "quote": "I love fools' experiments. I am always making them.", 
+  "author": "Darwin", 
+  "tags": [ ], 
+  "category": "", 
+  "title": "", 
+  "id": "" 
+  },
+    { 
+  "quote": "The secret of getting ahead is getting started.", 
+  "author": "Mark Twain", 
+  "tags": [ ], 
+  "category": "", 
+  "title": "", 
+  "id": "" 
+  },
+    { 
+  "quote": "Progress is impossible without change, and those who cannot change their minds cannot change anything.", 
+  "author": "George Bernard Shaw", 
+  "tags": [ ], 
+  "category": "", 
+  "title": "", 
+  "id": "" 
+  },
+  { 
+  "quote": "I often quote myself. It adds spice to my conversation.", 
+  "author": "George Bernard Shaw", 
+  "tags": [ ], 
+  "category": "", 
+  "title": "", 
+  "id": "" 
+  },
+    { 
+  "quote": "Love all, trust a few, do wrong to none.", 
+  "author": "William Shakespeare", 
+  "tags": [ ], 
+  "category": "", 
+  "title": "", 
+  "id": "" 
+  },
+    { 
+  "quote": "There is nothing either good or bad but thinking makes it so.", 
+  "author": "William Shakespeare", 
+  "tags": [ ], 
+  "category": "", 
+  "title": "", 
+  "id": "" 
+  },
+    { 
+  "quote": "I can resist everything except temptation.", 
+  "author": "Oscar Wilde", 
+  "tags": [ ], 
+  "category": "", 
+  "title": "", 
+  "id": "" 
   }
 ]
 } 
